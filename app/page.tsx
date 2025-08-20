@@ -1,7 +1,9 @@
+import HomeView from "./components/HomeView";
+
 export default function Home() {
     return (
         <div>
-            <p>Hello Lumari</p>
+            <HomeView />
         </div>
     );
 }
