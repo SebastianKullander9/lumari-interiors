@@ -4,6 +4,7 @@ import ProjectsSlider from "./components/ProjectsSlider";
 import About from "./components/About";
 import Footer from "./components/Footer";
 import LineBreakHeader from "./components/LineBreakHeader";
+import Contact from "./components/Contact";
 
 export default function Home() {
     return (
@@ -13,6 +14,7 @@ export default function Home() {
             <LineBreakHeader title="our work"/>
 			<ProjectsSlider />
 			<About />
+            <Contact />
 			<Footer />
         </div>
     );
