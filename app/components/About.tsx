@@ -6,8 +6,8 @@ export default function About() {
             <div className=" bg-white">
                 <div className="container mx-auto flex flex-row w-screen h-screen items-center">
                     <div className="w-1/2 flex flex-col gap-6">
-                        <h1 className="text-4xl uppercase">About us</h1>
-                        <p className="text-sm text-gray-700 max-w-prose">
+                        <h1 className="text-4xl uppercase font-semibold">About us</h1>
+                        <p className="text-base text-gray-500 max-w-prose">
                             We create personalized interior environments with a keen eye for detail. 
                             Our mission is to design spaces that combine character and functionality, 
                             whether for private homes or commercial environments. At Lumari Interiors, 

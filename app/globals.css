@@ -1,17 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 @import "tailwindcss";
 
 :root {
 	--font-tenor: "Tenor sans", sans-serif;
+	--font-rubik: "Rubik", sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: var(--font-tenor);
 }
 
+p, li {
+	font-family: var(--font-rubik);
+}
+
 body, html {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+	overflow-x: hidden;
 	overscroll-behavior: none;
 }

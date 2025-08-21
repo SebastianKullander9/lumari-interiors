@@ -2,14 +2,14 @@ import { FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
     return (
-        <footer className="w-screen h-[33vh] bg-orange-100">
+        <footer className="h-[33vh] bg-orange-100">
             <div className="relative container mx-auto flex h-full items-center">
                 <div className="w-1/3 flex flex-col items-center">
-                    <h1 className="text-lg">CONTACT US</h1>
+                    <h1 className="text-lg font-semibold">CONTACT US</h1>
                     <a className="text-sm text-gray-700" href="mailto:info@lumari.se">info@lumari.se</a>
                 </div>
                 <div className="w-1/3 flex flex-col items-center">
-                    <h1 className="text-lg">FOLLOW OUR SOCIALS</h1>
+                    <h1 className="text-lg font-semibold">FOLLOW OUR SOCIALS</h1>
                     <a
                         href="https://www.instagram.com/lumari_interiors/"
                         target="_blank"
@@ -20,7 +20,7 @@ export default function Footer() {
                     </a>
                 </div>
                 <div className="w-1/3 flex flex-col items-center">
-                    <h1 className="text-lg">Navigation</h1>
+                    <h1 className="text-lg font-semibold">Navigation</h1>
                     <ul className="text-sm text-gray-700">
                         <li>
                             Projects

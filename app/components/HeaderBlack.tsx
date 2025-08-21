@@ -17,8 +17,8 @@ export default function HeaderBlack() {
     }, []);
 
     return (
-        <nav className={`fixed w-screen h-16 z-10 bg-black ${scrollY > 0 ? "bg-white" : ""} transition-colors duration-300`}>
-            <div className={`container mx-auto h-full relative flex items-center ${scrollY > 0 ? "text-black" : "text-white"} transition-colors duration-300`}>
+        <nav className={`w-screen h-16 z-10 bg-black transition-colors duration-300`}>
+            <div className={`container mx-auto h-full relative flex items-center text-white transition-colors duration-300`}>
                 <ul className="flex space-x-4">
                     <li>PROJECTS</li>
                     <li>ABOUT</li>

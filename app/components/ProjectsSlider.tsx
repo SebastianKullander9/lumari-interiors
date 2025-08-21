@@ -52,9 +52,9 @@ export default function ProjectsSlider() {
                                     className="object-cover"
                                     />
                                 </div>
-                                <div className="pt-4">
-                                    <h1 className="text-lg">{slideContent[index].name}</h1>
-                                    <p className="text-sm text-gray-600">{slideContent[index].text}</p>
+                                <div className="pt-4 min-h-[5rem]">
+                                    <h1 className="text-md font-semibold">{slideContent[index].name}</h1>
+                                    <p className="text-md text-gray-500">{slideContent[index].text}</p>
                                 </div>
                             </Link>
                         </div>
