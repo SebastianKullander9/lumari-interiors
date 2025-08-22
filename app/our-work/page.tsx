@@ -105,7 +105,7 @@ export default function OurWork() {
                                                 visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
                                                 exit: { opacity: 0, transition: { duration: 0.2 } }
                                             }}
-                                            className="flex flex-col gap-4 md:min-h-[45vh]"
+                                            className="flex flex-col gap-4 md:min-h-[35vh]"
                                         >
                                         <h1 className="font-semibold text-2xl pt-4 md:pt-0">{viewContent[view].name}</h1>
                                         <p className="text-lg text-gray-600 w-full md:w-4/5">{viewContent[view].text}</p>
