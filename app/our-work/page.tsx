@@ -5,6 +5,7 @@ import HeaderBlack from "../components/HeaderBlack";
 import Footer from "../components/Footer";
 import NavButtons from "../components/NavButtons";
 import { motion, AnimatePresence } from "motion/react";
+import Link from "next/link";
 
 const viewContent = [
     {
@@ -116,9 +117,11 @@ export default function OurWork() {
                                             exit: { opacity: 0, transition: { duration: 0.2 } }
                                             }}
                                         >
-                                        <p className="text-md text-gray-500 pt-4 md:pt-4">
-                                            Click here to view our gallery of this project
-                                        </p>
+                                        <Link href={`/projects/${viewContent[view].slug}`}>
+                                            <p className="text-lg text text-gray-600 pt-4 md:pt-4 hover:text-gray-900 transition-color duration-300">
+                                                Click here to view the gallery
+                                            </p>
+                                        </Link>
                                     </motion.div>
                                     </motion.div>
                                 </AnimatePresence>

@@ -13,8 +13,8 @@ export default function Home() {
             <HomeView />
             <LineBreakHeader title="our work"/>
 			<ProjectsSlider />
-			<About />
-            <Contact />
+			<About animate={true} />
+            <Contact animate={true}/>
 			<Footer />
         </div>
     );

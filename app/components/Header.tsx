@@ -30,7 +30,7 @@ export default function Header() {
                     <HamburgerMenu />
                 </div>
 
-                <Link className="absolute left-1/2 transform -translate-x-1/2 text-xl font-semibold" href="/">
+                <Link className="absolute left-1/2 transform -translate-x-1/2 whitespace-nowrap text-xl font-semibold" href="/">
                     <h1>
                         LUMARI INTERIORS
                     </h1>
@@ -39,3 +39,5 @@ export default function Header() {
         </nav>
     );
 }
+
+//

@@ -21,10 +21,10 @@ export default function HeaderBlack() {
     return (
         <nav className={`w-screen h-16 z-10 bg-black transition-colors duration-300`}>
             <div className={`lg:container mx-auto h-full relative flex items-center text-white transition-colors duration-300`}>
-                <div className="hidden lg:block">
-                    <Link className="p-4 font-semibold" href="/our-work">OUR WORK</Link>
-                    <Link className="p-4 font-semibold" href="/about">ABOUT</Link>
-                    <Link className="p-4 font-semibold" href="/contact">CONTACT</Link>
+                <div className="hidden lg:block text-lg">
+                    <Link className="p-4" href="/our-work">OUR WORK</Link>
+                    <Link className="p-4" href="/about">ABOUT</Link>
+                    <Link className="p-4" href="/contact">CONTACT</Link>
                 </div>
                 <div className="block lg:hidden">
                     <HamburgerMenu />

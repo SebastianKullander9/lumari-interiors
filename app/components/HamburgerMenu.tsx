@@ -48,6 +48,11 @@ export default function HamburgerMenu() {
 
                     <ul className="space-y-8 text-lg">
                         <li>
+                            <Link className="hover:underline underline-offset-4" href="/">
+                                Home
+                            </Link>
+                        </li>
+                        <li>
                             <Link className="hover:underline underline-offset-4" href="/our-work">
                                 Our work
                             </Link>
