@@ -18,13 +18,13 @@ export default function Contact({ animate = false }: ContactProps) {
                     viewport={{ once: true, amount: 0.5 }}
                 >
                     <motion.h1
-                        className="text-base mb-6 font-semibold"
+                        className="text-base mb-6 font-semibold uppercase"
                         variants={{
                             hidden: { opacity: 0, y: 40 },
                             show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
                         }}
                     >
-                        Let’s create something extraordinary together
+                        Contact us
                     </motion.h1>
                     <motion.p
                         className="text-sm text-gray-600 mb-12"

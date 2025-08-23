@@ -1,0 +1,46 @@
+backend:
+  name: github
+  repo: SebastianKullander9/lumari-interiors
+  branch: dev
+  auth_type: implicit
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "projects"
+    label: "Projects"
+    folder: "content/projects"
+    create: true
+    slug: "{{name}}"
+    fields:
+      - { label: "Project Name", name: "name", widget: "string" }
+      - {
+          label: "Short project description for carousel",
+          name: "textShort",
+          widget: "text",
+        }
+      - {
+          label: "Longer project description for our works page",
+          name: "textLong",
+          widget: "text",
+        }
+      - { label: "Location and date", name: "location", widget: "string" }
+      - {
+          label: "Image for carousel / slider",
+          name: "imageCarousel",
+          widget: "image",
+        }
+      - { label: "Big image for our works", name: "bigImage", widget: "image" }
+      - {
+          label: "Small image for our works",
+          name: "smallImage",
+          widget: "image",
+        }
+      - label: "Gallery"
+        name: "gallery"
+        widget: "list"
+        field:
+          label: "Image"
+          name: "image"
+          widget: "image"

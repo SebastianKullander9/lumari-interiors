@@ -21,7 +21,7 @@ export default function Footer() {
                     </a>
                 </div>
                 <div className="w-full md:w-1/3 pt-8 flex flex-col items-center">
-                    <h1 className="text-base font-semibold">Navigation</h1>
+                    <h1 className="text-base font-semibold">NAVIGATION</h1>
                     <ul className="text-sm text-gray-600">
                         <Link href="/our-work">
                             <li className="text-sm hover:text-gray-800 cursor-pointer">

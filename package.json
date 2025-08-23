@@ -10,7 +10,9 @@
   },
   "dependencies": {
     "embla-carousel": "^8.6.0",
+    "embla-carousel-autoplay": "^8.6.0",
     "embla-carousel-react": "^8.6.0",
+    "gray-matter": "^4.0.3",
     "hamburger-react": "^2.5.2",
     "iconoir-react": "^7.11.0",
     "motion": "^12.23.12",
