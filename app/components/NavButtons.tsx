@@ -10,13 +10,13 @@ export default function NavButtons({ onPrev, onNext }: NavButtonsProps ) {
         <>
             <button
                 onClick={onPrev}
-                className="p-4 rounded-full border-2 hover:bg-orange-100 border-orange-100 cursor-pointer transition-colors duration-300"
+                className="p-3 rounded-full border-1 hover:bg-black/10 hover:scale-107 transition-all animation-200 border-black cursor-pointer duration-300"
             >
                 <ArrowLeft />
             </button>
             <button
                 onClick={onNext}
-                className="p-4 rounded-full border-2 hover:bg-orange-100 border-orange-100 cursor-pointer transition-colors duration-300"
+                className="p-3 rounded-full border-1 hover:bg-black/10 hover:scale-107 transition-all animation-200 border-black cursor-pointer duration-300"
             >
                 <ArrowRight />
             </button>
