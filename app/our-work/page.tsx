@@ -45,12 +45,11 @@ export default function OurWork() {
     return (
         <section className="w-screen h-screen">
             <HeaderBlack />
-            <div className="w-full h-[calc(20%-64px)] flex flex-col items-center justify-center">
-                <p className="text-gray-600">PORTFOLIO</p>
-                <h1 className="font-semibold text-2xl sm:text-4xl">SHOWCASE OF OUR WORK</h1>
+            <div className="w-full flex pl-8 py-3">
+                <h1 className="font-semibold text-base">SHOWCASE OF OUR WORK</h1>
             </div>
             <div className="md:h-screen ">
-                <div className="w-full max-h-8/10 min-h-6/10 flex flex-row p-8 md:pr-10">
+                <div className="w-full h-[calc(100vh-112px)] flex flex-row px-8 pb-8 md:pr-10">
                     <div className="flex flex-col md:flex-row w-full">
                         <div className="w-full md:w-1/2 h-full md:pr-4 md:overflow-hidden">
                             <AnimatePresence mode="wait">
@@ -107,8 +106,8 @@ export default function OurWork() {
                                             }}
                                             className="flex flex-col gap-4 md:min-h-[35vh]"
                                         >
-                                        <h1 className="font-semibold text-2xl pt-4 md:pt-0">{viewContent[view].name}</h1>
-                                        <p className="text-lg text-gray-600 w-full md:w-4/5">{viewContent[view].text}</p>
+                                        <h1 className="font-semibold text-base pt-4 md:pt-0">{viewContent[view].name}</h1>
+                                        <p className="text-sm text-gray-600 w-full md:w-4/5">{viewContent[view].text}</p>
                                     </motion.div>
                                     <motion.div
                                         variants={{
@@ -118,8 +117,8 @@ export default function OurWork() {
                                             }}
                                         >
                                         <Link href={`/projects/${viewContent[view].slug}`}>
-                                            <p className="text-lg text text-gray-600 pt-4 md:pt-4 hover:text-gray-900 transition-color duration-300">
-                                                Click here to view the gallery
+                                            <p className="text-sm text text-gray-600 pt-4 md:pt-4 hover:text-gray-900 transition-color duration-300">
+                                                Click <span className="text-black font-bold underline">here</span> to view the gallery
                                             </p>
                                         </Link>
                                     </motion.div>
@@ -144,7 +143,7 @@ export default function OurWork() {
                                         />
                                     </motion.div>
                                 </AnimatePresence>
-                                <div className="flex gap-4 justify-end absolute top-0 right-0">
+                                <div className="flex gap-4 justify-end absolute bottom-0 right-0">
                                     <NavButtons onPrev={onPrev} onNext={onNext} />
                                 </div>
                             </div>   

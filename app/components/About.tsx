@@ -9,20 +9,20 @@ type AboutProps = {
 
 export default function About({ animate = false }: AboutProps) {
     return (
-        <section className="flex flex-col">
+        <section className="flex flex-col bg-[var(--color-baby-powder)]">
             <div className="">
-                <div className="container mx-auto flex w-screen h-screen items-center gap-8 flex-col lg:flex-row sm:flex-col px-4 justify-center">
+                <div className="flex w-screen h-[calc(100vh-64px)] items-center justify-center gap-8 flex-col lg:flex-row sm:flex-col px-8">
                 
                 {animate ? (
                     <motion.div
-                    className="flex flex-col gap-6 lg:w-1/2"
-                    initial="hidden"
-                    whileInView="show"
-                    transition={{ staggerChildren: 0.25 }}
-                    viewport={{ once: true, amount: 0.5 }}
+                        className="flex flex-col gap-6"
+                        initial="hidden"
+                        whileInView="show"
+                        transition={{ staggerChildren: 0.25 }}
+                        viewport={{ once: true, amount: 0.5 }}
                     >
                     <motion.h1
-                        className="text-4xl uppercase font-semibold text-center lg:text-start"
+                        className="text-base uppercase font-semibold text-start"
                         variants={{
                         hidden: { opacity: 0, y: 40 },
                         show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
@@ -38,7 +38,7 @@ export default function About({ animate = false }: AboutProps) {
                     ].map((text, i) => (
                         <motion.p
                         key={i}
-                        className="text-lg text-gray-600 lg:max-w-prose"
+                        className="text-sm text-gray-600 lg:max-w-prose"
                         variants={{
                             hidden: { opacity: 0, y: 40 },
                             show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
@@ -50,7 +50,7 @@ export default function About({ animate = false }: AboutProps) {
                     </motion.div>
                 ) : (
                     <div className="flex flex-col gap-6 lg:w-1/2">
-                    <h1 className="text-4xl uppercase font-semibold text-center lg:text-start">
+                    <h1 className="text-base uppercase font-semibold text-center lg:text-start">
                         About us
                     </h1>
                     {[
@@ -59,45 +59,12 @@ export default function About({ animate = false }: AboutProps) {
                         "Whether your project is small or large, our services include concept development, space planning, material selection, interior design, lighting design, and styling.",
                         "Additionally, we collaborate with talented landscapers and gardeners, providing recommendations or support throughout the process to make your experience as effortless as possible.",
                     ].map((text, i) => (
-                        <p key={i} className="text-lg text-gray-600 lg:max-w-prose">
+                        <p key={i} className="text-sm text-gray-600 lg:max-w-prose">
                         {text}
                         </p>
                     ))}
                     </div>
                 )}
-
-                {animate ? (
-                    <motion.div
-                    className="relative md:w-1/2 hidden lg:block"
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ duration: 1, ease: "easeOut" }}
-                    viewport={{ once: true, amount: 0.4 }}
-                    >
-                    <Image
-                        className="relative z-2"
-                        width={500}
-                        height={400}
-                        src="/about/living-room.jpg"
-                        alt="image of a living room"
-                        layout="responsive"
-                    />
-                    <div className="absolute top-6 left-6 bg-orange-100 h-full w-full"></div>
-                    </motion.div>
-                ) : (
-                    <div className="relative md:w-1/2 hidden lg:block">
-                    <Image
-                        className="relative z-2"
-                        width={500}
-                        height={400}
-                        src="/about/living-room.jpg"
-                        alt="image of a living room"
-                        layout="responsive"
-                    />
-                    <div className="absolute top-6 left-6 bg-orange-100 h-full w-full"></div>
-                    </div>
-                )}
-
                 </div>
             </div>
         </section>

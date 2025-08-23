@@ -7,7 +7,7 @@ export default function HamburgerMenu() {
     const [open, setOpen] = useState(false);
 
     return (
-        <div className="relative">
+        <div className="absolute top-[6] left-[20]">
             <Hamburger
                 toggled={open}
                 toggle={setOpen}

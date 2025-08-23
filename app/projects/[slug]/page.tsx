@@ -42,18 +42,17 @@ export default function ProjectPage() {
     return (
         <section>
             <HeaderBlack />
-            <div className="w-screen min-h-screen px-8 pb-8">
-                <div className="w-full h-[15vh] flex flex-col items-center justify-center">
-                    <p className="text-gray-600">GALLERY</p>
-                    <h1 className="uppercase text-3xl font-semibold">project {slug}</h1>
+            <div className="w-screen min-h-screen px-8">
+                <div className="w-full py-3">
+                    <h1 className="uppercase text-base font-semibold">project {slug}</h1>
                 </div>
                 <Masonry
                     breakpointCols={breakpointColumnsObj}
-                    className="flex -ml-4 w-auto"
-                    columnClassName="pl-4 bg-clip-padding"
+                    className="flex -ml-8 w-auto"
+                    columnClassName="pl-8 bg-clip-padding"
                 >
                     {images.map((src, i) => (
-                        <div key={i} className="mb-4">
+                        <div key={i} className="mb-8">
                             <Image
                                 src={src}
                                 alt={`${slug} image ${i}`}

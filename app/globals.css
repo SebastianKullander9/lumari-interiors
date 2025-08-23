@@ -2,23 +2,123 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 @import "tailwindcss";
 
+@font-face {
+	font-family: "PPPangaia";
+	src: url("/fonts/PPPangaia-Ultralight.otf") format("opentype");
+	font-weight: 100;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "PPPangaia";
+	src: url("/fonts/PPPangaia-UltralightItalic.otf") format("opentype");
+	font-weight: 100;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "PPPangaia";
+	src: url("/fonts/PPPangaia-Medium.otf") format("opentype");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "PPPangaia";
+	src: url("/fonts/PPPangaia-MediumItalic.otf") format("opentype");
+	font-weight: 400;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "PPPangaia";
+	src: url("/fonts/PPPangaia-Bold.otf") format("opentype");
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "PPPangaia";
+	src: url("/fonts/PPPangaia-BoldItalic.otf") format("opentype");
+	font-weight: 800;
+	font-style: italic;
+}
+
+/* PPNeueMontreal font setup */
+@font-face {
+  font-family: "PPNeueMontreal";
+  src: url("/fonts/PPNeueMontreal-Thin.otf") format("opentype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PPNeueMontreal";
+  src: url("/fonts/PPNeueMontreal-Italic.otf") format("opentype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "PPNeueMontreal";
+  src: url("/fonts/PPNeueMontreal-Book.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PPNeueMontreal";
+  src: url("/fonts/PPNeueMontreal-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PPNeueMontreal";
+  src: url("/fonts/PPNeueMontreal-SemiBoldItalic.otf") format("opentype");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "PPNeueMontreal";
+  src: url("/fonts/PPNeueMontreal-Bold.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+}
+
 :root {
 	--font-tenor: "Tenor sans", sans-serif;
 	--font-rubik: "Rubik", sans-serif;
+	--font-pppangaia: "PPPangaia", sans-serif;
+	--font-ppneuemontreal: "PPNeueMontreal", sans-serif;
+	--color-baby-powder: #FFFFFA;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1 {
+	font-family: var(--font-pppangaia);
+}
+
+h2, h3, h4, h5, h6 {
 	font-family: var(--font-tenor);
 }
 
 p, li, a {
-	font-family: var(--font-rubik);
+	font-family: var(--font-ppneuemontreal);
 }
 
 body, html {
+	background-color: var(--color-baby-powder);
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
 	overflow-x: hidden;
 	overscroll-behavior: none;
+	overflow: auto;
+  	scrollbar-width: none; 
+  	-ms-overflow-style: none; 
+}
+
+body::-webkit-scrollbar {
+  	display: none;
 }

@@ -6,35 +6,35 @@ export default function Footer() {
         <footer className="md:w-screen bg-orange-100">
             <div className="relative container mx-auto flex flex-col md:flex-row h-full items-center md:pt-8">
                 <div className="w-full md:w-1/3  pt-8 flex flex-col items-center">
-                    <h1 className="text-xl font-semibold">CONTACT US</h1>
-                    <a className="text-lg text-gray-600 hover:text-gray-800" href="mailto:info@lumari.se">info@lumari.se</a>
+                    <h1 className="text-base font-semibold">CONTACT US</h1>
+                    <a className="text-sm text-gray-600 hover:text-gray-800" href="mailto:info@lumari.se">info@lumari.se</a>
                 </div>
                 <div className="w-full md:w-1/3 pt-8 flex flex-col items-center">
-                    <h1 className="text-xl font-semibold">FOLLOW OUR SOCIALS</h1>
+                    <h1 className="text-base font-semibold">FOLLOW OUR SOCIALS</h1>
                     <a
                         href="https://www.instagram.com/lumari_interiors/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="cursor-pointer"
                     >
-                        <div className="flex items-center gap-1 text-gray-600 hover:text-gray-800"><FaInstagram size={20} /><p className="text-lg">instagram</p></div>
+                        <div className="flex items-center gap-1 text-gray-600 hover:text-gray-800"><FaInstagram size={20} /><p className="text-sm">instagram</p></div>
                     </a>
                 </div>
                 <div className="w-full md:w-1/3 pt-8 flex flex-col items-center">
-                    <h1 className="text-xl font-semibold">Navigation</h1>
+                    <h1 className="text-base font-semibold">Navigation</h1>
                     <ul className="text-sm text-gray-600">
                         <Link href="/our-work">
-                            <li className="text-lg hover:text-gray-800 cursor-pointer">
+                            <li className="text-sm hover:text-gray-800 cursor-pointer">
                                 Our work
                             </li>
                         </Link>
                         <Link href="/about">
-                            <li className="text-lg hover:text-gray-800 cursor-pointer">
+                            <li className="text-sm hover:text-gray-800 cursor-pointer">
                                 About
                             </li>
                         </Link>
                         <Link href="/contact">
-                            <li className="text-lg hover:text-gray-800 cursor-pointer">
+                            <li className="text-sm hover:text-gray-800 cursor-pointer">
                                 Contact
                             </li>
                         </Link>

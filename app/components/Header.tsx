@@ -19,21 +19,23 @@ export default function Header() {
     }, []);
 
     return (
-        <nav className={`fixed w-screen h-16 z-3 ${scrollY > 0 ? "bg-white" : ""} transition-colors duration-300`}>
-            <div className={`lg:container mx-auto h-full relative flex items-center ${scrollY > 0 ? "text-black" : "text-white"} transition-colors duration-300`}>   
+        <nav className={`fixed w-screen h-16 z-3 ${scrollY > 0 ? "bg-[var(--color-baby-powder)]" : ""} transition-colors duration-300`}>
+            <div className={`h-full relative flex justify-between items-center px-8 ${scrollY > 0 ? "text-black" : "text-white"} transition-colors duration-300`}>   
                 <div className="hidden lg:block">
-                    <Link className="p-4 text-lg" href="/our-work">OUR WORK</Link>
-                    <Link className="p-4 text-lg" href="/about">ABOUT</Link>
-                    <Link className="p-4 text-lg" href="/contact">CONTACT</Link>
+                    <Link className="py-4 pr-4 text-xs" href="/our-work">OUR WORK</Link>
+                    <Link className="p-4 text-xs" href="/about">ABOUT</Link>
+                    <Link className="p-4 text-xs" href="/contact">CONTACT</Link>
                 </div>
                 <div className="block lg:hidden">
                     <HamburgerMenu />
                 </div>
 
-                <Link className="absolute left-1/2 transform -translate-x-1/2 whitespace-nowrap text-xl font-semibold" href="/">
-                    <h1>
-                        LUMARI INTERIORS
-                    </h1>
+                <Link className="whitespace-nowrap text-xl font-semibold" href="/">
+                    {scrollY > 0 ? (
+                        <h1 className="font-[var(--font-pppangaia)]">LUMARI INTERIORS</h1>
+                    ) : (
+                        ""
+                    )}
                 </Link>
             </div>
         </nav>
