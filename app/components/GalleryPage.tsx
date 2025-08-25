@@ -3,7 +3,20 @@ import Image from "next/image";
 import Masonry from "react-masonry-css";
 import HeaderBlack from "@/app/components/HeaderBlack";
 import Footer from "@/app/components/Footer";
-import { Project } from "./ProjectsSlider";
+
+export interface Project {
+    name: string;
+    textShort: string;
+    textLong: string;
+    location: string;
+    imageCarousel: string;
+    bigImage: string;
+    smallImage: string;
+    gallery: string[];
+    slug: string;
+    bigImageUrl: string;
+    smallImageUrl: string;
+}
 
 export default function ProjectPage({ projects, slug }: { projects: Project[], slug: string }) {
     function getProjectGalleryAndName(slug: string): { images: string[]; name: string } {

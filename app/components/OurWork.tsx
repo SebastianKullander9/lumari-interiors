@@ -6,7 +6,21 @@ import Footer from "../components/Footer";
 import NavButtons from "../components/NavButtons";
 import { motion, AnimatePresence } from "motion/react";
 import Link from "next/link";
-import { Project } from "../components/ProjectsSlider";
+
+
+export interface Project {
+    name: string;
+    textShort: string;
+    textLong: string;
+    location: string;
+    imageCarousel: string;
+    bigImage: string;
+    smallImage: string;
+    gallery: string[];
+    slug: string;
+    bigImageUrl: string;
+    smallImageUrl: string;
+}
 
 export default function OurWork({ projects }: { projects: Project[] }) {
     const [view, setView] = useState(0);

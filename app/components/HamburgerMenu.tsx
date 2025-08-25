@@ -24,12 +24,12 @@ export default function HamburgerMenu() {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.3 }}
-                className="fixed inset-0 bg-[var(--color-baby-powder)]/75 backdrop-blur-xl z-40 flex flex-col items-center justify-center p-8"
+                className="fixed inset-0 bg-[var(--color-dusty-red)]/75 backdrop-blur-xl z-40 flex flex-col items-center justify-center p-8"
             >
-                <div className="absolute top-6 right-6 text-black">
+                <div className="absolute top-6 right-6 text-[var(--color-baby-powder)]">
                 <Hamburger toggled={open} toggle={setOpen} size={26} rounded />
                 </div>
-                <ul className="space-y-8 text-2xl text-black text-center">
+                <ul className="space-y-8 text-lg text-[var(--color-baby-powder)] text-center">
                     <li>
                         <Link
                         className="hover:underline underline-offset-4"
@@ -67,7 +67,7 @@ export default function HamburgerMenu() {
                         </Link>
                     </li>
                 </ul>
-                <div className="mt-16 text-sm text-gray-600 absolute bottom-0 pb-8">
+                <div className="mt-16 text-sm text-[var(--color-baby-powder)] absolute bottom-0 pb-8">
                 © {new Date().getFullYear()} Lumari Interiors
                 </div>
             </motion.div>

@@ -18,7 +18,7 @@ export default function Contact({ animate = false }: ContactProps) {
                     viewport={{ once: true, amount: 0.5 }}
                 >
                     <motion.h1
-                        className="text-base mb-6 font-semibold uppercase"
+                        className="text-base mb-6 font-semibold uppercase text-[var(--color-dusty-red)]"
                         variants={{
                             hidden: { opacity: 0, y: 40 },
                             show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
@@ -37,7 +37,7 @@ export default function Contact({ animate = false }: ContactProps) {
                     </motion.p>
                     <motion.a
                         href="mailto:info@lumari.com"
-                        className="inline-block px-4 py-4 border border-black text-black text-sm font-medium hover:bg-black hover:text-white transition-colors duration-300"
+                        className="inline-block px-4 py-4 border-2 border-[var(--color-dusty-red)] text-[var(--color-dusty-red)] text-sm font-medium hover:bg-[var(--color-dusty-red)] hover:text-white transition-colors duration-300"
                         variants={{
                             hidden: { opacity: 0, y: 40 },
                             show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
