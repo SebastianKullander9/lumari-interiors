@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Footer() {
     return (
         <footer className="md:w-screen bg-[var(--color-dusty-red)]">
-            <div className="relative max-w-screen-2xl mx-auto flex flex-row h-full items-center justify-between md:pt-8 px-4 lg:px-8 xl:px-16">
+            <div className="relative max-w-screen-2xl mx-auto flex flex-col sm:flex-row h-full items-center justify-between md:pt-8 px-4 lg:px-8 xl:px-16">
                 <div className=" pt-8 flex flex-col items-center">
                     <h1 className="text-xs md:text-base font-semibold text-[var(--color-baby-powder)]">CONTACT US</h1>
                     <a className="text-xs text-[var(--color-d5a9ab)] hover:text-[var(--color-baby-powder)]" href="mailto:info@lumari.se">info@lumari.se</a>

@@ -11,7 +11,7 @@ export default function HeaderBlack() {
     useEffect(() => {
         let bgColor = "var(--color-baby-powder)";
 
-        if (pathname.startsWith("/our-work") || pathname.startsWith("/about") || pathname.startsWith("/contact")) {
+        if (pathname.startsWith("/our-work") || pathname.startsWith("/about") || pathname.startsWith("/contact") || pathname.startsWith("/projects")) {
             bgColor = "var(--color-dusty-red)";
         }
 
