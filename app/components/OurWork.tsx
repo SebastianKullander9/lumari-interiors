@@ -37,7 +37,7 @@ export default function OurWork({ projects }: { projects: Project[] }) {
             <HeaderBlack />
             <div className="w-screen md:max-h-[calc(100svh-32px)] min-h-[calc(100svh-32px)] bg-[var(--color-baby-powder)] flex md:items-center">
                 <div className="max-w-screen-2xl mx-auto h-full relative flex flex-col pb-8 px-4 lg:px-8 xl:px-16">
-                    <div className="w-full flex py-3 pt-13">
+                    <div className="w-full flex py-3 pt-10">
                         <h1 className="font-semibold text-xs">SHOWCASE OF OUR WORK</h1>
                     </div>
 
@@ -173,7 +173,7 @@ export default function OurWork({ projects }: { projects: Project[] }) {
                 <div className="hidden md:flex lg:hidden gap-4 justify-center pb-8 md:pb-0 md:absolute md:bottom-0 md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2">
                     <NavButtons onPrev={onPrev} onNext={onNext} />
                 </div>
-                <div className="flex md:hidden lg:hidden gap-4 justify-center pb-8 md:pb-0 absolute bottom-0 left-1/2 transform -translate-x-1/2 -translatet-1/2">
+                <div className="flex md:hidden lg:hidden gap-4 justify-center pb-4 md:pb-0 absolute bottom-0 left-1/2 transform -translate-x-1/2 -translatet-1/2">
                     <NavButtons onPrev={onPrev} onNext={onNext} />
                 </div>
             </div>
