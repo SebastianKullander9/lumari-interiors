@@ -49,7 +49,7 @@ export default function HamburgerMenu() {
                                     href="/our-work"
                                     onClick={() => setOpen(false)}
                                 >
-                                    Our work
+                                    Our creations
                                 </Link>
                             </li>
                             <li>

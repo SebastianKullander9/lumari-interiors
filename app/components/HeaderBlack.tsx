@@ -24,7 +24,7 @@ export default function HeaderBlack() {
                 <div className="hidden lg:block">
                     <Link href="/our-work" className="py-4 pr-4 text-sm relative inline-block">
                         <span className="relative after:content-[''] after:absolute after:w-0 after:h-[1px] after:left-0 after:bottom-[-8] after:bg-current after:transition-all after:duration-300 hover:after:w-full">
-                            OUR WORK
+                            OUR CREATIONS
                         </span>
                     </Link>
                     <Link href="/about" className="p-4 text-sm relative inline-block">

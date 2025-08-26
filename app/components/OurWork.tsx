@@ -37,7 +37,7 @@ export default function OurWork({ projects }: { projects: Project[] }) {
             <HeaderBlack />
             <div className="w-screen md:max-h-[calc(100svh-32px)] min-h-[calc(100svh-32px)] bg-[var(--color-baby-powder)] flex md:items-center">
                 <div className="max-w-screen-2xl mx-auto h-full relative flex flex-col pb-8 px-4 lg:px-8 xl:px-16">
-                    <div className="w-full flex py-3">
+                    <div className="w-full flex py-3 pt-16">
                         <h1 className="font-semibold text-sm">SHOWCASE OF OUR WORK</h1>
                     </div>
 
