@@ -19,18 +19,19 @@ export interface Project {
     smallImageUrl: string;
 }
 
-export default function ProjectsSlider({ projects }: { projects: Project[] }) {
+export default function ProjectsSliderDesktop({ projects }: { projects: Project[] }) {
     const options: EmblaOptionsType = { loop: true };
     const [emblaRef] = useEmblaCarousel(options);
 
     const duplicatedProjects = [...projects, ...projects];
 
     return (
-        <section className="sm:w-screen h-[110vh] bg-[var(--color-baby-powder)] pt-[30vh]">
-            <div className="flex gap-2 py-3 pl-8">
-                <h1 className="text-base font-semibold">OUR WORK</h1>
+        <section className="sm:w-screen h-[100vh] bg-[var(--color-baby-powder)]">
+            <div className="flex gap-2 py-3 pl-8 pt-[10vh]">
+                                <h1 className="text-base font-semibold pt-10">OUR WORK</h1>
             </div>
             <div className="overflow-hidden h-full" ref={emblaRef}>   
+
                 <div className="flex touch-pan-y ml-[-1rem] h-full">
                     
                 {duplicatedProjects.map((project, index) => (

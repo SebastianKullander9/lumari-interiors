@@ -9,7 +9,7 @@ type ContactProps = {
 export default function Contact({ animate = false }: ContactProps) {
     if (animate) {
         return (
-            <section className="w-screen h-[calc(100vh-64px)] flex items-center justify-center bg-[var(--color-baby-powder)]">
+            <section className="w-screen h-[calc(100vh-64px)] flex justify-center lg:items-center bg-[var(--color-baby-powder)] px-4 lg:px-8 xl:px-16">
                 <motion.div
                     className="max-w-3xl text-center px-6"
                     initial="hidden"
@@ -18,7 +18,7 @@ export default function Contact({ animate = false }: ContactProps) {
                     viewport={{ once: true, amount: 0.5 }}
                 >
                     <motion.h1
-                        className="text-base mb-6 font-semibold uppercase"
+                        className="text-xs mb-6 font-semibold uppercase text-black pt-16"
                         variants={{
                             hidden: { opacity: 0, y: 40 },
                             show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
@@ -27,7 +27,7 @@ export default function Contact({ animate = false }: ContactProps) {
                         Contact us
                     </motion.h1>
                     <motion.p
-                        className="text-sm text-gray-600 mb-12"
+                        className="text-xs md:text-sm text-gray-600 mb-12"
                         variants={{
                             hidden: { opacity: 0, y: 40 },
                             show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
@@ -37,7 +37,7 @@ export default function Contact({ animate = false }: ContactProps) {
                     </motion.p>
                     <motion.a
                         href="mailto:info@lumari.com"
-                        className="inline-block px-4 py-4 border border-black text-black text-sm font-medium hover:bg-black hover:text-white transition-colors duration-300"
+                        className="inline-block px-4 py-4 border-2 border-[var(--color-dusty-red)] text-[var(--color-dusty-red)] text-xs md:text-sm font-medium hover:bg-[var(--color-dusty-red)] hover:text-white transition-colors duration-300"
                         variants={{
                             hidden: { opacity: 0, y: 40 },
                             show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },

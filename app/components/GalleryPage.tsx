@@ -3,7 +3,20 @@ import Image from "next/image";
 import Masonry from "react-masonry-css";
 import HeaderBlack from "@/app/components/HeaderBlack";
 import Footer from "@/app/components/Footer";
-import { Project } from "./ProjectsSlider";
+
+export interface Project {
+    name: string;
+    textShort: string;
+    textLong: string;
+    location: string;
+    imageCarousel: string;
+    bigImage: string;
+    smallImage: string;
+    gallery: string[];
+    slug: string;
+    bigImageUrl: string;
+    smallImageUrl: string;
+}
 
 export default function ProjectPage({ projects, slug }: { projects: Project[], slug: string }) {
     function getProjectGalleryAndName(slug: string): { images: string[]; name: string } {
@@ -20,8 +33,6 @@ export default function ProjectPage({ projects, slug }: { projects: Project[], s
 
     const { images, name } = getProjectGalleryAndName(slug);
 
-    console.log(images);
-
     const breakpointColumnsObj = {
         default: 3,
         1024: 2,
@@ -31,9 +42,9 @@ export default function ProjectPage({ projects, slug }: { projects: Project[], s
     return (
         <section>
             <HeaderBlack />
-            <div className="w-screen min-h-screen px-8">
+            <div className="w-screen max-w-screen-2xl mx-auto min-h-screen bg-[var(--color-baby-powder)] px-4 lg:px-8 xl:px-16">
                 <div className="w-full py-3">
-                    <h1 className="uppercase text-base font-semibold">{name}</h1>
+                    <h1 className="uppercase text-sm text-black font-semibold">{name}</h1>
                 </div>
                 <Masonry
                     breakpointCols={breakpointColumnsObj}
@@ -41,7 +52,7 @@ export default function ProjectPage({ projects, slug }: { projects: Project[], s
                     columnClassName="pl-8 bg-clip-padding"
                 >
                     {images.map((src: string, i:number) => (
-                        <div key={i} className="mb-8">
+                        <div key={i} className="mb-4 md:mb-8">
                             <Image
                                 src={src}
                                 alt={`${slug} image ${i}`}

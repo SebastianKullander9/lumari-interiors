@@ -6,7 +6,20 @@ import Footer from "../components/Footer";
 import NavButtons from "../components/NavButtons";
 import { motion, AnimatePresence } from "motion/react";
 import Link from "next/link";
-import { Project } from "../components/ProjectsSlider";
+
+export interface Project {
+    name: string;
+    textShort: string;
+    textLong: string;
+    location: string;
+    imageCarousel: string;
+    bigImage: string;
+    smallImage: string;
+    gallery: string[];
+    slug: string;
+    bigImageUrl: string;
+    smallImageUrl: string;
+}
 
 export default function OurWork({ projects }: { projects: Project[] }) {
     const [view, setView] = useState(0);
@@ -22,33 +35,33 @@ export default function OurWork({ projects }: { projects: Project[] }) {
     return (
         <section>
             <HeaderBlack />
-            <div className="w-screen md:max-h-[calc(100vh-64px)] min-h-[calc(100vh-64px)]">
-                <div className="w-full flex pl-8 py-3">
-                    <h1 className="font-semibold text-base">SHOWCASE OF OUR WORK</h1>
-                </div>
-
-                <div className="flex flex-col md:flex-row">
-                    <div className="w-full md:w-6/10 lg:w-1/2 px-8 md:pl-8 md:pr-0 pb-8">
-                        <AnimatePresence mode="wait">
-                            <motion.div
-                                key={view}
-                                initial={{ x: -50, opacity: 0 }}
-                                animate={{ x: 0, opacity: 1 }}
-                                exit={{ opacity: 0 }}
-                                transition={{ duration: 0.3 }}
-                            >
-                                <Image
-                                    width={1000}
-                                    height={400}
-                                    layout="responsive"
-                                    src={projects[view].bigImage}
-                                    alt=""
-                                />
-                            </motion.div>
-                        </AnimatePresence>
+            <div className="w-screen md:max-h-[calc(100svh-32px)] min-h-[calc(100svh-32px)] bg-[var(--color-baby-powder)] flex md:items-center">
+                <div className="max-w-screen-2xl mx-auto h-full relative flex flex-col pb-8 px-4 lg:px-8 xl:px-16">
+                    <div className="w-full flex py-3 pt-10">
+                        <h1 className="font-semibold text-xs">SHOWCASE OF OUR WORK</h1>
                     </div>
-                    <div className="w-full md:w-4/10 lg:1/2">
-                        <div className="flex flex-col justify-between h-full pb-8 px-8">
+
+                    <div className="grid grid-cols-1 md:grid-cols-10 md:gap-6 h-full">
+                        <div className="aspect-32/27 relative md:col-span-7 lg:col-span-5 overflow-hidden">
+                            <AnimatePresence mode="wait">
+                                <motion.div
+                                    key={view}
+                                    initial={{ x: -50, opacity: 0 }}
+                                    animate={{ x: 0, opacity: 1 }}
+                                    exit={{ opacity: 0 }}
+                                    transition={{ duration: 0.3 }}
+                                    className="absolute inset-0"
+                                >
+                                    <Image
+                                        src={projects[view].bigImage}
+                                        alt={projects[view].name}
+                                        fill
+                                    />
+                                </motion.div>
+                            </AnimatePresence>
+                        </div>
+
+                        <div className="flex flex-col justify-between md:col-span-3 lg:col-span-3">
                             <AnimatePresence mode="wait">
                                 <motion.div
                                     key={view + "-texts"}
@@ -57,54 +70,80 @@ export default function OurWork({ projects }: { projects: Project[] }) {
                                     exit="exit"
                                     variants={{
                                         visible: {
-                                        transition: { staggerChildren: 0.3 }
+                                            transition: { staggerChildren: 0.3 },
                                         },
                                         hidden: {},
                                         exit: {
-                                        transition: { staggerChildren: 0.1, staggerDirection: -1 }
-                                        }
+                                            transition: {
+                                                staggerChildren: 0.1,
+                                                staggerDirection: -1,
+                                            },
+                                        },
                                     }}
                                     className="flex flex-col justify-between h-full"
                                 >
-                                <motion.div
-                                    variants={{
-                                        hidden: { opacity: 0, y: 20 },
-                                        visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
-                                        exit: { opacity: 0, transition: { duration: 0.2 } }
-                                        }}
-                                    >
-                                    <p className="text-sm text-gray-500 hidden md:block">Stockholm, 2025</p>
-                                </motion.div>
-                                <motion.div
-                                    variants={{
+                                    <motion.div
+                                        variants={{
                                             hidden: { opacity: 0, y: 20 },
-                                            visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
-                                            exit: { opacity: 0, transition: { duration: 0.2 } }
-                                        }}
-                                        className="flex flex-col gap-4 md:min-h-[35vh]"
-                                    >
-                                    <h1 className="font-semibold text-base pt-4 md:pt-0 uppercase">{projects[view].name}</h1>
-                                    <p className="text-sm text-gray-600 w-full md:w-4/5">{projects[view].textLong}</p>
-                                </motion.div>
-                                <motion.div
-                                    variants={{
-                                        hidden: { opacity: 0, y: 20 },
-                                        visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
-                                        exit: { opacity: 0, transition: { duration: 0.2 } }
+                                            visible: {
+                                                opacity: 1,
+                                                y: 0,
+                                                transition: { duration: 0.4 },
+                                            },
+                                            exit: { opacity: 0, transition: { duration: 0.2 } },
                                         }}
                                     >
-                                    <Link href={`/projects/${projects[view].slug}`}>
-                                        <p className="text-sm text text-gray-600 pt-4 md:pt-4 hover:text-gray-900 transition-color duration-300">
-                                            Click <span className="text-black font-bold underline">here</span> to view the gallery
+                                        <p className="text-xs md:text-sm text-gray-500 hidden md:block">
+                                            Stockholm, 2025
                                         </p>
-                                    </Link>
-                                </motion.div>
+                                    </motion.div>
+
+                                    <motion.div
+                                        variants={{
+                                            hidden: { opacity: 0, y: 20 },
+                                            visible: {
+                                                opacity: 1,
+                                                y: 0,
+                                                transition: { duration: 0.4 },
+                                            },
+                                            exit: { opacity: 0, transition: { duration: 0.2 } },
+                                        }}
+                                        className="flex flex-col md:gap-4 md:min-h-[35vh]"
+                                    >
+                                        <h1 className="font-semibold text-xs pt-4 md:pt-0 uppercase">
+                                            {projects[view].name}
+                                        </h1>
+                                        <p className="text-xs md:text-sm text-gray-600 w-full md:w-4/5">
+                                            {projects[view].textLong}
+                                        </p>
+                                    </motion.div>
+
+                                    <motion.div
+                                        variants={{
+                                            hidden: { opacity: 0, y: 20 },
+                                            visible: {
+                                                opacity: 1,
+                                                y: 0,
+                                                transition: { duration: 0.4 },
+                                            },
+                                            exit: { opacity: 0, transition: { duration: 0.2 } },
+                                        }}
+                                    >
+                                        <Link href={`/projects/${projects[view].slug}`}>
+                                            <p className="text-xs md:text-sm text text-gray-600 pt-4 md:pt-4 hover:text-gray-900 transition-color duration-300">
+                                                Click{" "}
+                                                <span className="text-black font-bold underline">
+                                                    here
+                                                </span>{" "}
+                                                to view the gallery
+                                            </p>
+                                        </Link>
+                                    </motion.div>
                                 </motion.div>
                             </AnimatePresence>
                         </div>
-                    </div>
-                    <div className="w-1/4 hidden lg:block">
-                        <div className="pr-8 flex h-full pl-4 flex-col justify-center relative">
+
+                        <div className="hidden lg:flex items-center lg:col-span-2 relative">
                             <AnimatePresence mode="wait">
                                 <motion.div
                                     key={view + "-small"}
@@ -116,22 +155,30 @@ export default function OurWork({ projects }: { projects: Project[] }) {
                                     <Image
                                         width={500}
                                         height={500}
-                                        layout="responsive"
                                         src={projects[view].smallImage}
-                                        alt=""
+                                        alt={projects[view].name}
+                                        className="object-contain"
                                     />
                                 </motion.div>
                             </AnimatePresence>
                         </div>
-                        <div className="flex gap-4 justify-end absolute bottom-8 right-8">
-                            <NavButtons onPrev={onPrev} onNext={onNext} />
-                        </div>
+                    </div>
+
+                    {/* Nav buttons for desktop */}
+                    <div className="hidden lg:flex gap-4 justify-end absolute bottom-8 right-4 lg:right-8 xl:right-16">
+                        <NavButtons onPrev={onPrev} onNext={onNext} />
                     </div>
                 </div>
-                <div className="flex lg:hidden gap-4 justify-center pb-8 md:pb-0 md:absolute md:bottom-0 md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2">
+                {/* Nav buttons for mobile */}
+                <div className="hidden md:flex lg:hidden gap-4 justify-center pb-8 md:pb-0 md:absolute md:bottom-0 md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2">
+                    <NavButtons onPrev={onPrev} onNext={onNext} />
+                </div>
+                <div className="flex md:hidden lg:hidden gap-4 justify-center pb-4 md:pb-0 absolute bottom-0 left-1/2 transform -translate-x-1/2 -translatet-1/2">
                     <NavButtons onPrev={onPrev} onNext={onNext} />
                 </div>
             </div>
+
+            
             <Footer />
         </section>
     );

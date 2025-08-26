@@ -92,10 +92,13 @@
 	--font-pppangaia: "PPPangaia", sans-serif;
 	--font-ppneuemontreal: "PPNeueMontreal", sans-serif;
 	--color-baby-powder: #FFFFFA;
+	--color-d5a9ab: #dfbfc0;
+	--color-dusty-red: #492425;
 }
 
 h1 {
-	font-family: var(--font-pppangaia);
+	/*font-family: var(--font-pppangaia);*/
+	font-family: var(--font-tenor);
 }
 
 h2, h3, h4, h5, h6 {
@@ -107,7 +110,7 @@ p, li, a {
 }
 
 body, html {
-	background-color: var(--color-baby-powder);
+	background-color: var(--color-baby-powder)!important;
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;

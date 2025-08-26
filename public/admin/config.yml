@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: SebastianKullander9/lumari-interiors
-  branch: dev
+  branch: design-v2
   auth_type: implicit
 
 media_folder: "public/uploads"
