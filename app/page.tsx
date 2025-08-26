@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import ProjectsSliderMobile from "./components/ProjectsSliderMobile";
 import ProjectSliderDesktop from "./components/ProjectSliderDesktop";
 import ProjectsHomeView from "./components/ProjectsHomeView"; 
+import HomeViewTest from "./components/HomeViewTest";
 import Footer from "./components/Footer";
 import { getProjects } from "./lib/getProjects";
 
@@ -34,9 +35,7 @@ export default function Home() {
 			<div className="fixed inset-0 bg-cover bg-center z-0" style={{ backgroundImage: "url('/home-background-no-arm.jpg')" }}></div>
             <div className="relative z-10">
             <Header />
-            <HomeView />
-            <ProjectsHomeView />
-            <Footer />
+            <HomeViewTest />
             </div>
         </div>
     );

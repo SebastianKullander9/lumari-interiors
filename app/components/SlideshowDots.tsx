@@ -1,5 +1,5 @@
 interface SlideshowDotsProps {
-    images: string[];
+    images: string[] | string[][];
     indexProp: number;
 }
 
