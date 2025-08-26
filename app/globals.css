@@ -110,7 +110,7 @@ p, li, a {
 }
 
 body, html {
-	background-color: var(--color-dusty-red);
+	background-color: var(--color-baby-powder)!important;
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;

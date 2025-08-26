@@ -28,7 +28,6 @@ export default function HamburgerMenu() {
                         transition={{ duration: 0.15 }}
                         className="fixed inset-0 bg-white/75 backdrop-blur-xs flex flex-col items-center justify-center p-8 z-40"
                         onClick={(e) => {
-                            // Only close if clicking the backdrop, not the menu items
                             if (e.target === e.currentTarget) {
                                 setOpen(false);
                             }

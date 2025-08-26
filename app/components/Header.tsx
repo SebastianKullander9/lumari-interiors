@@ -4,9 +4,9 @@ import Link from "next/link";
 import HamburgerMenu from "./HamburgerMenu";
 
 export default function Header() {
-    const [scrollY, setScrollY] = useState(0);
+    /*const [scrollY, setScrollY] = useState(0);*/
 
-    useEffect(() => {
+    /*useEffect(() => {
         const handleScroll = () => {
             setScrollY(window.scrollY);
         };
@@ -24,11 +24,11 @@ export default function Header() {
         } else {
             document.body.style.backgroundColor = "var(--color-baby-powder)";
         }
-    }, [scrollY]);
+    }, [scrollY]);*/
 
     return (
-        <nav className={`fixed w-screen h-16 z-3 ${scrollY > 0 ? "bg-[var(--color-baby-powder)]" : ""} transition-colors duration-300 `}>
-            <div className={`max-w-screen-2xl mx-auto h-full relative flex justify-between items-center ${scrollY > 0 ? "text-[var(--color-dusty-red)]" : "text-white"} transition-colors duration-300 px-4 lg:px-8 xl:px-16`}>   
+        <nav className={`fixed w-screen h-16 z-3 transition-colors duration-300 `}>
+            <div className={`max-w-screen-2xl mx-auto h-full relative flex justify-between items-center text-white transition-colors duration-300 px-4 lg:px-8 xl:px-16`}>   
                 <div className="hidden lg:block">
                     <Link href="/our-work" className="py-4 pr-4 text-sm relative inline-block">
                         <span className="relative after:content-[''] after:absolute after:w-0 after:h-[1px] after:left-0 after:bottom-[-8] after:bg-current after:transition-all after:duration-300 hover:after:w-full">

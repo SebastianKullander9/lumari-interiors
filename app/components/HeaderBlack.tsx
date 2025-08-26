@@ -22,17 +22,17 @@ export default function HeaderBlack() {
         <nav className={`w-screen mx-auto h-16 z-10 bg-[var(--color-dusty-red)] transition-colors duration-300`}>
             <div className={`h-full max-w-screen-2xl mx-auto relative flex justify-between items-center text-[var(--color-baby-powder)] transition-colors duration-300 px-4 lg:px-8 xl:px-16`}>
                 <div className="hidden lg:block">
-                    <Link href="/our-work" className="py-4 pr-4 text-xs relative inline-block">
+                    <Link href="/our-work" className="py-4 pr-4 text-sm relative inline-block">
                         <span className="relative after:content-[''] after:absolute after:w-0 after:h-[1px] after:left-0 after:bottom-[-8] after:bg-current after:transition-all after:duration-300 hover:after:w-full">
                             OUR WORK
                         </span>
                     </Link>
-                    <Link href="/about" className="p-4 text-xs relative inline-block">
+                    <Link href="/about" className="p-4 text-sm relative inline-block">
                         <span className="relative after:content-[''] after:absolute after:w-0 after:h-[1px] after:left-0 after:bottom-[-8] after:bg-current after:transition-all after:duration-300 hover:after:w-full">
                             ABOUT
                         </span>
                     </Link>
-                    <Link href="/contact" className="p-4 text-xs relative inline-block">
+                    <Link href="/contact" className="p-4 text-sm relative inline-block">
                         <span className="relative after:content-[''] after:absolute after:w-0 after:h-[1px] after:left-0 after:bottom-[-8] after:bg-current after:transition-all after:duration-300 hover:after:w-full">
                             CONTACT
                         </span>

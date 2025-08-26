@@ -33,8 +33,6 @@ export default function ProjectPage({ projects, slug }: { projects: Project[], s
 
     const { images, name } = getProjectGalleryAndName(slug);
 
-    console.log(images);
-
     const breakpointColumnsObj = {
         default: 3,
         1024: 2,
