@@ -7,6 +7,7 @@ import SlideshowDots from "./SlideshowDots";
 const MotionImage = motion(Image);
 
 const images = [
+    "/home-background-no-arm.jpg",
     "/1.jpeg",
     "/9.jpeg",
     "/project-r-5.jpeg",
