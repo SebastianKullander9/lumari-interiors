@@ -44,9 +44,9 @@ export default function ProjectPage({ projects, slug }: { projects: Project[], s
     return (
         <section>
             <HeaderBlack />
-            <div className="w-screen min-h-screen px-8">
+            <div className="w-screen max-w-screen-2xl mx-auto min-h-screen bg-[var(--color-baby-powder)] px-4 lg:px-8 xl:px-16">
                 <div className="w-full py-3">
-                    <h1 className="uppercase text-base font-semibold">{name}</h1>
+                    <h1 className="uppercase text-base text-[var(--color-dusty-red)] font-semibold">{name}</h1>
                 </div>
                 <Masonry
                     breakpointCols={breakpointColumnsObj}
@@ -54,7 +54,7 @@ export default function ProjectPage({ projects, slug }: { projects: Project[], s
                     columnClassName="pl-8 bg-clip-padding"
                 >
                     {images.map((src: string, i:number) => (
-                        <div key={i} className="mb-8">
+                        <div key={i} className="mb-4 md:mb-8">
                             <Image
                                 src={src}
                                 alt={`${slug} image ${i}`}

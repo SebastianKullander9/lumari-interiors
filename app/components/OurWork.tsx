@@ -35,7 +35,7 @@ export default function OurWork({ projects }: { projects: Project[] }) {
     return (
         <section>
             <HeaderBlack />
-            <div className="w-screen md:max-h-[calc(100vh-32px)] min-h-[calc(100vh-32px)] bg-[var(--color-baby-powder)] flex items-center px-4 lg:px-8 xl:px-16">
+            <div className="w-screen md:max-h-[calc(100vh-32px)] min-h-[calc(100vh-32px)] bg-[var(--color-baby-powder)] flex md:items-center px-4 lg:px-8 xl:px-16">
                 <div className="max-w-screen-2xl mx-auto h-full relative flex flex-col pb-8">
                     {/* Page Title */}
                     <div className="w-full flex py-3">
@@ -184,6 +184,8 @@ export default function OurWork({ projects }: { projects: Project[] }) {
                     <NavButtons onPrev={onPrev} onNext={onNext} />
                 </div>
             </div>
+
+            
             <Footer />
         </section>
     );

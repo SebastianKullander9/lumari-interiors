@@ -1,8 +1,23 @@
 "use client";
 import Link from "next/link";
 import HamburgerMenu from "./HamburgerMenu";
+import { usePathname } from "next/navigation";
+import { useState, useEffect } from "react";
+
 
 export default function HeaderBlack() {
+    const pathname = usePathname();
+
+    useEffect(() => {
+        let bgColor = "var(--color-baby-powder)";
+
+        if (pathname.startsWith("/our-work") || pathname.startsWith("/about") || pathname.startsWith("/contact")) {
+            bgColor = "var(--color-dusty-red)";
+        }
+
+        document.body.style.backgroundColor = bgColor;
+    }, [pathname]);
+
     return (
         <nav className={`w-screen mx-auto h-16 z-10 bg-[var(--color-dusty-red)] transition-colors duration-300`}>
             <div className={`h-full max-w-screen-2xl mx-auto relative flex justify-between items-center text-[var(--color-baby-powder)] transition-colors duration-300 px-4 lg:px-8 xl:px-16`}>
