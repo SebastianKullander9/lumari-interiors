@@ -9,7 +9,7 @@ export default function About({ animate = false }: AboutProps) {
     return (
         <section className="flex flex-col bg-[var(--color-baby-powder)]">
             <div className="">
-                <div className="flex w-screen h-[calc(100vh-64px)] items-center justify-center gap-8 flex-col lg:flex-row sm:flex-col px-4 lg:px-8 xl:px-16">
+                <div className="flex w-screen h-[calc(100vh-64px)] items-center gap-8 lg:justify-center flex-col lg:flex-row sm:flex-col px-4 lg:px-8 xl:px-16">
                 
                 {animate ? (
                     <motion.div
@@ -20,7 +20,7 @@ export default function About({ animate = false }: AboutProps) {
                         viewport={{ once: true, amount: 0.5 }}
                     >
                     <motion.h1
-                        className="text-xs md:text-sm uppercase font-semibold text-start text-black"
+                        className="text-xs md:text-sm uppercase font-semibold text-start text-black pt-8"
                         variants={{
                         hidden: { opacity: 0, y: 40 },
                         show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },

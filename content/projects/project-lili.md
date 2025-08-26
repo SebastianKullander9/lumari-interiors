@@ -3,8 +3,8 @@ name: project lili
 textShort: A luxury villa built entirely from scratch
 textLong: A luxury villa built entirely from scratch, inspired by the warm and
   inviting aesthetics of Southern Europe, located in the stunning Swedish
-  archipelago. In collaboration with Fox & Vince, Kitchen by paul and landscape architect
-  Ulrika Sommar
+  archipelago. In collaboration with Fox & Vince, KitchenS by paul and landscape architect
+  Ulrika Sommar,
 location: Stockholm, 2025
 imageCarousel: /uploads/carousel-lili.jpeg
 bigImage: /uploads/bigimage.jpeg
