@@ -37,16 +37,11 @@ export default function OurWork({ projects }: { projects: Project[] }) {
             <HeaderBlack />
             <div className="w-screen md:max-h-[calc(100vh-32px)] min-h-[calc(100vh-32px)] bg-[var(--color-baby-powder)] flex md:items-center px-4 lg:px-8 xl:px-16">
                 <div className="max-w-screen-2xl mx-auto h-full relative flex flex-col pb-8">
-                    {/* Page Title */}
                     <div className="w-full flex py-3">
                         <h1 className="font-semibold text-base">SHOWCASE OF OUR WORK</h1>
                     </div>
 
-                    {/* Grid layout */}
                     <div className="grid grid-cols-1 md:grid-cols-10 gap-6 h-full">
-                        {/* Big Image */}
-
-
                         <div className="aspect-32/27 relative md:col-span-7 lg:col-span-5 overflow-hidden">
                             <AnimatePresence mode="wait">
                                 <motion.div
@@ -66,7 +61,6 @@ export default function OurWork({ projects }: { projects: Project[] }) {
                             </AnimatePresence>
                         </div>
 
-                        {/* Text Content */}
                         <div className="flex flex-col justify-between md:col-span-3 lg:col-span-3">
                             <AnimatePresence mode="wait">
                                 <motion.div
@@ -149,7 +143,6 @@ export default function OurWork({ projects }: { projects: Project[] }) {
                             </AnimatePresence>
                         </div>
 
-                        {/* Small Image (desktop only) */}
                         <div className="hidden lg:flex items-center lg:col-span-2 relative">
                             <AnimatePresence mode="wait">
                                 <motion.div
