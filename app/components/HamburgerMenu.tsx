@@ -7,7 +7,7 @@ export default function HamburgerMenu() {
     const [open, setOpen] = useState(false);
 
     return (
-        <div className="absolute top-[6] left-[20] z-50">
+        <div className="absolute top-[6] left-[9] z-50">
         <Hamburger
             toggled={open}
             toggle={setOpen}

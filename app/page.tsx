@@ -2,6 +2,7 @@ import HomeView from "./components/HomeView";
 import Header from "./components/Header";
 import ProjectsSliderMobile from "./components/ProjectsSliderMobile";
 import ProjectSliderDesktop from "./components/ProjectSliderDesktop";
+import ProjectsHomeView from "./components/ProjectsHomeView"; 
 import Footer from "./components/Footer";
 import { getProjects } from "./lib/getProjects";
 
@@ -34,12 +35,7 @@ export default function Home() {
             <div className="relative z-10">
             <Header />
             <HomeView />
-            <div className="hidden md:block">
-                <ProjectSliderDesktop projects={projects}/>
-            </div>
-            <div className="block md:hidden">
-                <ProjectsSliderMobile projects={tempProjects} />
-            </div>
+            <ProjectsHomeView />
             <Footer />
             </div>
         </div>

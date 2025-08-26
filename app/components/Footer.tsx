@@ -4,13 +4,13 @@ import Link from "next/link";
 export default function Footer() {
     return (
         <footer className="md:w-screen bg-[var(--color-dusty-red)]">
-            <div className="relative container mx-auto flex flex-col md:flex-row h-full items-center md:pt-8">
-                <div className="w-full md:w-1/3  pt-8 flex flex-col items-center">
-                    <h1 className="text-base font-semibold text-[var(--color-baby-powder)]">CONTACT US</h1>
-                    <a className="text-sm text-[var(--color-d5a9ab)] hover:text-[var(--color-baby-powder)]" href="mailto:info@lumari.se">info@lumari.se</a>
+            <div className="relative max-w-screen-2xl mx-auto flex flex-row h-full items-center justify-between md:pt-8 px-4 lg:px-8 xl:px-16">
+                <div className=" pt-8 flex flex-col items-center">
+                    <h1 className="text-xs md:text-base font-semibold text-[var(--color-baby-powder)]">CONTACT US</h1>
+                    <a className="text-xs text-[var(--color-d5a9ab)] hover:text-[var(--color-baby-powder)]" href="mailto:info@lumari.se">info@lumari.se</a>
                 </div>
-                <div className="w-full md:w-1/3 pt-8 flex flex-col items-center">
-                    <h1 className="text-base font-semibold text-[var(--color-baby-powder)]">FOLLOW OUR SOCIALS</h1>
+                <div className="pt-8 flex flex-col items-center">
+                    <h1 className="text-xs md:text-base font-semibold text-[var(--color-baby-powder)]">FOLLOW OUR SOCIALS</h1>
                     <a
                         href="https://www.instagram.com/lumari_interiors/"
                         target="_blank"
@@ -20,21 +20,21 @@ export default function Footer() {
                         <div className="flex items-center gap-1 text-[var(--color-d5a9ab)] hover:text-[var(--color-baby-powder)]"><FaInstagram size={20} /><p className="text-sm">instagram</p></div>
                     </a>
                 </div>
-                <div className="w-full md:w-1/3 pt-8 flex flex-col items-center">
-                    <h1 className="text-base font-semibold text-[var(--color-baby-powder)]">NAVIGATION</h1>
+                <div className="pt-8 flex flex-col items-center">
+                    <h1 className="text-xs md:text-base font-semibold text-[var(--color-baby-powder)]">NAVIGATION</h1>
                     <ul className="text-sm text-[var(--color-d5a9ab)] flex flex-col items-center">
                         <Link href="/our-work">
-                            <li className="text-sm hover:text-[var(--color-baby-powder)] cursor-pointer">
+                            <li className="text-xs hover:text-[var(--color-baby-powder)] cursor-pointer">
                                 Our work
                             </li>
                         </Link>
                         <Link href="/about">
-                            <li className="text-sm hover:text-[var(--color-baby-powder)] cursor-pointer">
+                            <li className="text-xs hover:text-[var(--color-baby-powder)] cursor-pointer">
                                 About
                             </li>
                         </Link>
                         <Link href="/contact">
-                            <li className="text-sm hover:text-[var(--color-baby-powder)] cursor-pointer">
+                            <li className="text-xs hover:text-[var(--color-baby-powder)] cursor-pointer">
                                 Contact
                             </li>
                         </Link>

@@ -9,7 +9,7 @@ export default function About({ animate = false }: AboutProps) {
     return (
         <section className="flex flex-col bg-[var(--color-baby-powder)]">
             <div className="">
-                <div className="flex w-screen h-[calc(100vh-64px)] items-center justify-center gap-8 flex-col lg:flex-row sm:flex-col px-8">
+                <div className="flex w-screen h-[calc(100vh-64px)] items-center justify-center gap-8 flex-col lg:flex-row sm:flex-col px-4 lg:px-8 xl:px-16">
                 
                 {animate ? (
                     <motion.div

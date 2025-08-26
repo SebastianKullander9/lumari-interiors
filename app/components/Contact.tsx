@@ -9,7 +9,7 @@ type ContactProps = {
 export default function Contact({ animate = false }: ContactProps) {
     if (animate) {
         return (
-            <section className="w-screen h-[calc(100vh-64px)] flex items-center justify-center bg-[var(--color-baby-powder)]">
+            <section className="w-screen h-[calc(100vh-64px)] flex items-center justify-center bg-[var(--color-baby-powder)] px-4 lg:px-8 xl:px-16">
                 <motion.div
                     className="max-w-3xl text-center px-6"
                     initial="hidden"
