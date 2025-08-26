@@ -32,7 +32,7 @@ export default function Home() {
 
     return (
         <div>
-			<div className="fixed inset-0 bg-cover bg-center z-0" style={{ backgroundImage: "url('/home-background-no-arm.jpg')" }}></div>
+			{/*<div className="fixed inset-0 bg-cover bg-center z-0" style={{ backgroundImage: "url('/home-background-no-arm.jpg')" }}></div>*/}
             <div className="relative z-10">
             <Header />
             <HomeViewTest />

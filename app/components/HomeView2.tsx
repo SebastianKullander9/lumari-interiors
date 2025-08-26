@@ -8,10 +8,8 @@ const MotionImage = motion(Image);
 
 const images = [
     "/1.jpeg",
-    "/6.jpeg",
-    "/project-s.jpeg",
+    "/9.jpeg",
     "/project-r-5.jpeg",
-    "/project-r-3.jpeg"
 ];
 
 export default function HomeView2() {
@@ -32,7 +30,7 @@ export default function HomeView2() {
     }, []);
 
     return (
-        <section className="w-screen h-screen relative overflow-hidden">
+        <section className="w-screen h-[100dvh] relative overflow-hidden">
             {images.map((src, i) => {
                 
                 return <MotionImage
