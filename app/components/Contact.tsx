@@ -18,7 +18,7 @@ export default function Contact({ animate = false }: ContactProps) {
                     viewport={{ once: true, amount: 0.5 }}
                 >
                     <motion.h1
-                        className="text-base mb-6 font-semibold uppercase text-[var(--color-dusty-red)]"
+                        className="text-base mb-6 font-semibold uppercase text-black"
                         variants={{
                             hidden: { opacity: 0, y: 40 },
                             show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },

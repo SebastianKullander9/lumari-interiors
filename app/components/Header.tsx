@@ -50,7 +50,7 @@ export default function Header() {
                     <HamburgerMenu />
                 </div>
 
-                <Link className="whitespace-nowrap text-xl font-semibold" href="/">
+                <Link className="whitespace-nowrap text-lg font-semibold" href="/">
                     <h1 className="font-[var(--font-pppangaia)]">LUMARI INTERIORS</h1>
                 </Link>
             </div>

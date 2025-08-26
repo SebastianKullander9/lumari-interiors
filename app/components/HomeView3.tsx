@@ -24,7 +24,7 @@ export default function HomeView2() {
             });
 
             setIndex((prev) => (prev + 1) % images.length);
-        }, 10000);
+        }, 4000);
 
         return () => clearInterval(interval);
     }, [overlayControls]);

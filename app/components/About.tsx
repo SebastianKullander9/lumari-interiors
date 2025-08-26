@@ -20,7 +20,7 @@ export default function About({ animate = false }: AboutProps) {
                         viewport={{ once: true, amount: 0.5 }}
                     >
                     <motion.h1
-                        className="text-base uppercase font-semibold text-start text-[var(--color-dusty-red)]"
+                        className="text-sm uppercase font-semibold text-start text-black"
                         variants={{
                         hidden: { opacity: 0, y: 40 },
                         show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
