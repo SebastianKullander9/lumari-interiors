@@ -165,7 +165,7 @@ export default function OurWork({ projects }: { projects: Project[] }) {
                     </div>
 
                     {/* Nav buttons for desktop */}
-                    <div className="hidden lg:flex gap-4 justify-end absolute bottom-8 right-0">
+                    <div className="hidden lg:flex gap-4 justify-end absolute bottom-8 right-4 lg:right-8 xl:right-16">
                         <NavButtons onPrev={onPrev} onNext={onNext} />
                     </div>
                 </div>
