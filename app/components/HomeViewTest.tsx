@@ -1,6 +1,6 @@
 import Header from "../components/Header";
 import HomeView2 from "../components/HomeView2";
-import HomeView3 from "../components/HomeView3";
+import HomeViewDesktop from "../components/HomeViewDesktop";
 
 export default function HomeViewTest() {
     return (
@@ -9,7 +9,7 @@ export default function HomeViewTest() {
                 <HomeView2 />
             </div>
             <div className="hidden lg:block">
-                <HomeView3 />
+                <HomeViewDesktop />
             </div>
         </section>
     )

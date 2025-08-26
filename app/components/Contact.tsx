@@ -36,14 +36,14 @@ export default function Contact({ animate = false }: ContactProps) {
                         We take on select projects in interior architecture and design. Reach out to start the conversation.
                     </motion.p>
                     <motion.a
-                        href="mailto:info@lumari.com"
+                        href="mailto:info@lumari.se"
                         className="inline-block px-4 py-4 border-2 border-[var(--color-dusty-red)] text-[var(--color-dusty-red)] text-xs md:text-sm font-medium hover:bg-[var(--color-dusty-red)] hover:text-white transition-colors duration-300"
                         variants={{
                             hidden: { opacity: 0, y: 40 },
                             show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
                         }}
                     >
-                        info@lumari.com
+                        info@lumari.se
                     </motion.a>
                 </motion.div>
             </section>
@@ -58,10 +58,10 @@ export default function Contact({ animate = false }: ContactProps) {
                     We take on select projects in interior architecture and design. Reach out to start the conversation.
                 </p>
                 <a
-                    href="mailto:info@lumari.com"
+                    href="mailto:info@lumari.se"
                     className="inline-block px-8 py-4 border border-black text-black text-lg font-medium hover:bg-black hover:text-white transition-colors duration-300"
                 >
-                    info@lumari.com
+                    info@lumari.se
                 </a>
             </div>
         </section>
