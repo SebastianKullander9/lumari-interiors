@@ -8,7 +8,7 @@ export default function HamburgerMenu() {
 
     return (
         <>
-            <div className={`absolute top-[6] left-[9] z-50 ${open ? "text-black" : "text-[var(--color-baby-powder)]"} transition-colors duration-300`}>
+            <div className={`absolute top-[6] left-[9] z-50 ${open ? "text-black" : "text-[var(--color-baby-powder)]"}`}>
                 <Hamburger
                     toggled={open}
                     toggle={setOpen}
@@ -25,7 +25,7 @@ export default function HamburgerMenu() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-                        transition={{ duration: 0.3 }}
+                        transition={{ duration: 0.15 }}
                         className="fixed inset-0 bg-white/75 backdrop-blur-xs flex flex-col items-center justify-center p-8 z-40"
                         onClick={(e) => {
                             // Only close if clicking the backdrop, not the menu items
