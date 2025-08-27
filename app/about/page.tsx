@@ -6,7 +6,7 @@ export default function AboutPage() {
     return (
         <>
             <HeaderBlack />
-            <About animate={true}/>
+            <About/>
             <Footer />
         </>
     );
