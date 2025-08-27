@@ -1,12 +1,12 @@
-import Header from "../components/Header";
-import HomeView2 from "../components/HomeView2";
-import HomeViewDesktop from "../components/HomeViewDesktop";
+import Header from "./Header";
+import HomeViewMobile from "./HomeViewMobile";
+import HomeViewDesktop from "./HomeViewDesktop";
 
 export default function HomeViewTest() {
     return (
         <section>
             <div className="lg:hidden">
-                <HomeView2 />
+                <HomeViewMobile />
             </div>
             <div className="hidden lg:block">
                 <HomeViewDesktop />
