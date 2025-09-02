@@ -16,7 +16,6 @@ gallery:
   - /uploads/4.jpeg
   - /uploads/6.jpeg
   - /uploads/7.jpeg
-  - /uploads/8.jpeg
   - /uploads/9.jpeg
   - /uploads/carousel-lili.jpeg
 ---
