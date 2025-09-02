@@ -1,31 +1,8 @@
 "use client";
-import { useState, useEffect } from "react";
 import Link from "next/link";
 import HamburgerMenu from "./HamburgerMenu";
 
 export default function Header() {
-    /*const [scrollY, setScrollY] = useState(0);*/
-
-    /*useEffect(() => {
-        const handleScroll = () => {
-            setScrollY(window.scrollY);
-        };
-
-        window.addEventListener("scroll", handleScroll);
-
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        }
-    }, []);
-
-    useEffect(() => {
-        if (scrollY > 0) {
-            document.body.style.backgroundColor = "var(--color-dusty-red)";
-        } else {
-            document.body.style.backgroundColor = "var(--color-baby-powder)";
-        }
-    }, [scrollY]);*/
-
     return (
         <nav className={`fixed w-screen h-16 z-3 transition-colors duration-300 `}>
             <div className={`max-w-screen-2xl mx-auto h-full relative flex justify-between items-center text-white transition-colors duration-300 px-4 lg:px-8 xl:px-16`}>   

@@ -6,7 +6,7 @@ export default function ContactPage() {
     return (
         <>
             <HeaderBlack />
-            <Contact animate={true} />
+            <Contact />
             <Footer />
         </>
 
